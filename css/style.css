@@ -8875,7 +8875,7 @@ input:checked+.slider::before {
     position: absolute;
     top: -17%;
     margin-top: 10px;
-    width: 150px;
+    width: 180px;
     height: 60px;
     opacity: 0;
     -webkit-transform: translate3d(-15, 0, 0);
@@ -8920,4 +8920,11 @@ input:checked+.slider::before {
     color: #FF0000;
     font-size: 2.1rem;
     font-weight: 600;
+}
+
+.ads {
+    position: absolute;
+    width: 100%;
+    left: -10px;
+    color: #fff;
 }
