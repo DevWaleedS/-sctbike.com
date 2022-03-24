@@ -1,0 +1,36 @@
+.section-header_ar {
+    margin-bottom: 2.5rem;
+    position: relative; }
+    .section-header__title_ar {
+      position: relative;
+      padding-bottom: 1rem; }
+    .section-header__title_ar.white-style {
+      color: #fff;
+      text-align: right; }
+    .section-header__title_ar:after {
+      content: '';
+      position: absolute;
+      bottom: 0.0625rem;
+      right: 0;
+      width: 1.9rem;
+      height: 0.0625rem;
+      background: #fb646f; }
+    .section-header__description {
+      max-width: 33.75rem;
+      margin: 0;
+      font-size: 1.0625rem; }
+    .section-header__description.white-style {
+      color: #fff; }
+
+      .listing-detail__title-black_ar {
+        color: #363636;
+        overflow: hidden;
+        display: flex; }
+        .listing-detail__title-black_ar > span {
+          display: inline-block;
+          margin-top: 0.5rem;
+          margin-right: 0.5rem;
+          /* float: right; */
+         }
+      .listing-detail__address {
+        color: #bbbbbb; }
