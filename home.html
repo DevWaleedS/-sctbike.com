@@ -1,0 +1,601 @@
+<!doctype html>
+
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>SCT_Bike</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="./images/bicycle.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/triptip-assets.min.css">
+
+    <!-- bootstarp files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Css Files for OWL Carousel libray -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- Swiper cdn files  -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- css files -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_ar.css">
+    <style>
+        .dropbtnToty {
+            background-color: #fff;
+            color: 000000;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            border-radius: 7px;
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        .dropdownToty {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .dropdown-contentToty {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 100%;
+        }
+        
+        .dropdown-contentToty a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+        }
+        
+        .dropdown-contentToty a:hover {
+            background-color: #f1f1f1;
+            width: 100%;
+        }
+        
+        .dropdownToty:hover .dropdown-contentToty {
+            display: block;
+            width: 100%;
+        }
+        
+        .dropdownToty:hover .dropbtnToty {
+            background-color: #f1f1f1;
+            width: 100%;
+        }
+        /* .owl-wrapper
+        {
+            display: block !important;
+        } */
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Container -->
+    <header dir="rtl" class="clearfix white-header-style fullwidth-with-search">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">
+                    <img src="img/home/logo.png" alt="" style=" width: 200px;">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse text-right row" id="navbarSupportedContent">
+                    <ul class="navbar-nav col-8">
+                        <li class="nav-item "><a class="nav-link tnava mr-5 ml-4 active" href="home.html">الرئيسية</a></li>
+                        <li class="nav-item "><a class="nav-link tnava mr-4 ml-4" href="" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">أقسامنا</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="https://sctbike.com/ar/ad?category=%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%AC%D8%A7%D8%AA%20%D8%A7%D9%84%D9%86%D8%A7%D8%B1%D9%8A%D8%A9">الدرجات النارية</a></li>
+                                <li><a class="dropdown-item" href="https://sctbike.com/ar/ad?category=%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D8%A9">السيارات الرياضيه</a></li>
+                                <li><a class="dropdown-item" href="https://sctbike.com/ar/ad?category=%D9%82%D8%B7%D8%B9%20%D8%A7%D9%84%D8%BA%D9%8A%D8%A7%D8%B1%20%D9%88%20%D8%A7%D9%84%D8%A7%D9%83%D8%B3%D8%B3%D9%88%D8%B1%D8%A7%D8%AA">قطع الغيار</a></li>
+                                <li><a class="dropdown-item" href="https://sctbike.com/ar/ad?category=%D8%A7%D8%AF%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%D8%A9">أدوات السلامه</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item "><a class="nav-link tnava mr-4 ml-4" href="" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">خدماتنا</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="https://sctbike.com/ar/service/4">فحص المركبات</a></li>
+                                <li><a class="dropdown-item" href="https://sctbike.com/ar/service/1">الشراء عنك</a></li>
+                                <li><a class="dropdown-item" href="https://sctbike.com/ar/service/3">نقل الملكيه</a></li>
+                                <li><a class="dropdown-item" href="https://sctbike.com/ar/service/2">شحن وتوصيل</a></li>
+                                <li><a class="dropdown-item" href="https://sctbike.com/ar/service/5">تأجير المواقف</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item "><a class="nav-link tnava mr-4 ml-4" href="https://sctbike.com/aboutus">من نحن</a></li>
+                        <li class="nav-item "><a class="nav-link tnava mr-4 ml-4" href="https://sctbike.com/contactus">تواصل معنا</a></li>
+
+                    </ul>
+                    <ul class="navbar-nav left-list col-4">
+                        <li class="nav-item "><a class="nav-link tnava mr-4 ml-4" href=""> English </a></li>
+
+
+                        <li class="nav-item "><a class="nav-link tnava mr-4 ml-4" href="" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user-o" aria-hidden="true" style="display: block !important; font-size: 1.50rem;"></i></a>
+                            <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item  main" href="https://sctbike.com/profile/1">
+                                        <img src="./img/sponsors/1.jpg" class=" rounded-circle w-25 float-right" alt="..." style="border: 1px solid #fb646f; ">
+                                        <h3 style="font-weight: bold;" class="me-auto ">وسام حسن</h3>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item  " href="https://sctbike.com/profile/1#pills-tab4">
+
+                                        <i class="bi bi-chat-left "></i>
+                                        <small class="  ">الرسائل</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item " href="https://sctbike.com/profile/1#pills-tab5">
+
+                                        <i class="bi bi-bell "></i>
+                                        <small class="me-auto "> الاشعارات</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item " href="https://sctbike.com/ar/profile/1#pills-tab2">
+
+                                        <i class="bi bi-heart "></i>
+                                        <small class="me-auto "> المفضله</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item " href="#">
+                                        <i class="bi bi-gear-fill "></i>
+                                        <small class="me-auto "> الاعدادات</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item " href="https://sctbike.com/ar/logout">
+                                        <i class="bi bi-box-arrow-right "></i>
+                                        <small class="me-auto "> تسجيل الخروج</small>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <section class="discover text-right mt-5 " dir="rtl" style=' margin-top: 50px !important;'>
+        <div class="container">
+            <div class="row header-content">
+                <div class="col-sm-6">
+                    <p class="discover__title">
+                        انطلق الان
+                    </p>
+                    <p class="discover__description">
+                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group mb-3 search-form">
+
+                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden"></span>
+                          </button>
+                        <!-- chosse country -->
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#"> <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200630132504/uflag.jpg" width="20" height="15"> USA</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200630132502/eflag.jpg" width="20" height="15"> England</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200630132500/bflag.jpg" width="20" height="15"> Brazil</a>
+                            </li>
+                        </ul>
+                        <!-- Country logo -->
+                        <button type="submit" class="btn btn-outline-secondary"> <img src="img/home/drop.png" width="25" height="20"></button>
+
+                        <input type="search" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="ما الذي تبحث عنة؟">
+                    </div>
+
+
+                </div>
+            </div>
+
+            <br><br>
+
+        </div>
+    </section>
+
+
+    <section class="discover-slider mb-5">
+        <div class="container">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+
+                    <div class=" card-container" style="margin: auto;">
+                        <div class="our-services-card">
+                            <a style="width: 100%;" href="https://sctbike.com/ar/ad?category=%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%AC%D8%A7%D8%AA%20%D8%A7%D9%84%D9%86%D8%A7%D8%B1%D9%8A%D8%A9">
+                                <img src="img/home/sl1.png">
+                                <h2 class="text-center">الدرجات النارية </h2>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class=" card-container" style="margin: auto;">
+                        <div class="our-services-card">
+                            <a style="width: 100%;" href="https://sctbike.com/ar/ad?category=%D9%82%D8%B7%D8%B9%20%D8%A7%D9%84%D8%BA%D9%8A%D8%A7%D8%B1%20%D9%88%20%D8%A7%D9%84%D8%A7%D9%83%D8%B3%D8%B3%D9%88%D8%B1%D8%A7%D8%AA">
+                                <img src="img/home/sl2.png">
+                                <h2 class="text-center">قطع الغيار</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class=" card-container" style="margin: auto;">
+                        <div class="our-services-card">
+                            <a style="width: 100%;" href="https://sctbike.com/ar/ad?category=%D8%A7%D8%AF%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%D8%A9">
+                                <img src="img/home/sl4.png">
+                                <h2 class="text-center"> أدوات السلامة</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class=" card-container" style="margin: auto;">
+                        <div class="our-services-card">
+                            <a style="width: 100%;" href="https://sctbike.com/ar/ad?category=%D8%A7%D8%AF%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%D8%A9">
+                                <img src="img/home/sl3.png">
+                                <h2 class="text-center"> السيارات الرياضية</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services mt-5 ">
+        <div dir="rtl" class="news-title text-right row">
+            <h4>الاخبار</h4>
+            <p>هنالك العديد من النواع المتوفرة لنصوص لو ريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص |هنالك العديد من النواع المتوفرة لنصوص </p>
+        </div>
+        <div dir="rtl" class="service-cover ">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/home/carousel-01.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/home/carousel-02.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/home/carousel-03.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/home/carousel-01.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/home/carousel-02.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sevices-section">
+        <div dir="rtl" class=" container-fluid pr-5" style="margin-bottom: 50px;">
+            <div dir="rtl" class="row our-services m-4">
+                <h1 class="">خدماتنا</h2>
+            </div>
+            <div dir="rtl" class="row our-services m-4">
+                <div class="col-lg-2 col-md-6 col-12 card-container mb-5" style="margin: auto;">
+                    <div class="our-services-card">
+                        <a style="width :100%" href="https://sctbike.com/ar/service/4">
+                            <img src="img/home/inspection.jpg">
+                            <h2 class="text-center">فحص مركبات</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12 card-container mb-5" style="margin: auto;">
+                    <div class="our-services-card">
+                        <a style="width :100%" href="https://sctbike.com/ar/service/1">
+                            <img src="img/home/bayung.jpg">
+                            <h2 class="text-center">الشراء عنك</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-12 card-container mb-5" style="margin: auto;">
+                    <div class="our-services-card">
+
+                        <a style="width :100%" href="https://sctbike.com/ar/service/3">
+                            <img src="img/home/rent.jpg">
+                            <h2 class="text-center"> نقل الملكية</h2>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-12 card-container mb-5" style="margin: auto;">
+                    <div class="our-services-card">
+
+                        <a style="width :100%" href="https://sctbike.com/ar/service/2">
+                            <img src="img/home/delevrey.jpg">
+                            <h2 class="text-center"> شحن وتوصيل</h2>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12 card-container mb-5" style="margin: auto;">
+                    <div class="our-services-card">
+
+                        <a style="width :100%" href="https://sctbike.com/ar/service/5">
+                            <img src="img/home/grag.jpg">
+                            <h2 class="text-center"> تأجير المواقف</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="advertising">
+        <div dir="rtl" class=" container-fluid" style="margin-bottom: 50px;">
+            <div class="row">
+                <div class="col-lg-5 col-12  pr-5 ">
+                    <div dir="rtl" class="row our-services m-4" style="margin-bottom: 70px;">
+                        <h1 class="">الماركة</h2>
+                    </div>
+                    <div class="row m-4 advertise-image">
+                        <img src="img/home/bmw.png" class="col-sm-4 mb-4" style="width: 100%; height: 170px;">
+                        <img src="img/home/honda.jpg" class="col-sm-4 mb-4" style="width: 100%; height: 170px;">
+                        <img src="img/home/ductia.jpg" class="col-sm-4 mb-4" style="width: 100%; height: 170px;">
+                        <img src="img/home/harly.png" class="col-sm-4 mb-4" style="width: 100%; height: 170px;">
+                        <img src="img/home/suzuki.jpg" class="col-sm-4 mb-4" style="width: 100%; height: 170px;">
+                        <img src="img/home/yamha.jpg" class="col-sm-4 mb-4" style="width: 100%; height: 170px;">
+                        <img src="img/home/kawasaki.jpg" class="col-sm-4 mb-4" style="width: 100%; height: 170px;">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12 pr-5">
+                    <div dir="rtl" class="row our-services m-4" style="margin-bottom: 70px;">
+                        <h1 class="">اعلانات</h2>
+                    </div>
+                    <div class="row ads-container" dir="ltr">
+                        <img src="img/home/sl1.png" class="col-sm-4">
+
+                        <div dir="rtl" class="col-sm-8 text-right" style="padding: 20px;">
+                            <h1>دراجة بي أم دابليو ادفن</h1>
+                            <h2><i class="fa fa-user" aria-hidden="true"></i> وسام حسن</h2>
+                            <div class="row">
+                                <h5 class="col-6"><i class="fa fa-map-marker" aria-hidden="true"></i> الرياض</h5>
+                                <h6 class="col-6"><i class="fa fa-clock-o" aria-hidden="true"></i> قبل يومين</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ads-container" dir="ltr">
+                        <img src="img/home/bike-01.jpg" class="col-sm-4">
+
+                        <div dir="rtl" class="col-sm-8 text-right" style="padding: 20px;">
+                            <h1>دراجة بي أم دابليو ادفن</h1>
+                            <h2><i class="fa fa-user" aria-hidden="true"></i> وسام حسن</h2>
+                            <div class="row">
+                                <h5 class="col-6"><i class="fa fa-map-marker" aria-hidden="true"></i> الرياض</h5>
+                                <h6 class="col-6"><i class="fa fa-clock-o" aria-hidden="true"></i> قبل يومين</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ads-container" dir="ltr">
+                        <img src="img/home/bike-02.jpg" class="col-sm-4">
+
+
+                        <div dir="rtl" class="col-sm-8 text-right" style="padding: 20px;">
+                            <h1>دراجة بي أم دابليو ادفن</h1>
+                            <h2><i class="fa fa-user" aria-hidden="true"></i> وسام حسن</h2>
+                            <div class="row">
+                                <h5 class="col-6"><i class="fa fa-map-marker" aria-hidden="true"></i> الرياض</h5>
+                                <h6 class="col-6"><i class="fa fa-clock-o" aria-hidden="true"></i> قبل يومين</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="pagination">
+                            <ul class="pagination-2">
+                                <li class="page-number prev"><a href="#">&laquo;</a></li>
+                                <li class="page-number active"><a href="#">1</a></li>
+                                <li class="page-number "><a href="#">2</a></li>
+                                <li class="page-number"><a href="#">3</a></li>
+                                <li class="page-number"><a href="#">4</a></li>
+                                <li class="page-number"><a href="#">5</a></li>
+                                <li class="page-number"><a href="#">6</a></li>
+                                <li class="page-number"><a href="#">7</a></li>
+                                <li class="page-number"><a href="#">8</a></li>
+                                <li class="page-number"><a href="#">9</a></li>
+                                <li class="page-number"><a href="#">10</a></li>
+                                <li class="page-number prev"><a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="add-button-section">
+        <div class="container">
+            <div style="position: relative;">
+                <div class="n-ppost text-center">
+                    <h1>+</h1>
+                </div>
+                <div class="n-ppost-name text-right row">
+                    <div class="n-ppost-pp text-center">
+                        <a href="">+</a>
+                    </div>
+                    <div style="margin-top: 20px; ">
+                        <h2 style="color: rgb(255, 255, 255); text-align: right;">اضف اعلانك</h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <footer class="footer " style="z-index: 1;">
+        <div class="container">
+            <div class="text-center">
+                <a class="store-button" href="https://play.google.com/store"><img src="img/home/googlePlay.png"></a>
+                <a class="store-button" href="https://www.apple.com/app-store/"><img src="img/home/AppStore.png"></a>
+            </div>
+
+            <div class="footer__up-part">
+                <div dir="rtl" class="row text-right">
+                    <div class="col-md-4">
+
+                        <div class="footer__widget text-widget">
+                            <img src="img/home/logo-footer.png" alt="triptip-logo">
+                            <p class="footer__widget-description">
+                                هنالك العديد من انواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت ،تريد أن تستخدم نص لوريم إيبسوم ما
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer__widget subscribe-widget">
+                            <h2 class="">
+                                روابط مباشرة
+                            </h2>
+
+                            <a href="https://sctbike.com/ar/aboutus">
+                                من نحن
+                            </a>
+                            <br>
+                            <a href="https://sctbike.com/ar/contactus">
+                                تواصل معنا 
+                            </a>
+                            <br>
+                            <a href="https://sctbike.com/ar/commission">
+                            حساب العمولة والسداد    
+                            </a>
+                            <br>
+                            <a href="https://sctbike.com/ar/condition">
+                                الشروط والاحكام  
+                            </a>
+                            <br>
+                            <a href="https://sctbike.com/ar/privacy">
+                                السياسة والخصوصية 
+                            </a>
+                            <br>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer__widget subscribe-widget">
+                            <h2 class="">
+                                تابعنا
+                            </h2>
+
+                            <a class="icon-link socila" style="--clr: #FEFB00" href="https://www.snapchat.com/add/google_bike">
+                                <i class="fa fa-snapchat-ghost"></i>
+                            </a>
+
+                            <a class="icon-link socila" style="--clr: #C6085B" href="https://www.instagram.com/goooglebike/">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+
+                            <a class="icon-link socila" style="--clr: #1B99ED" href="https://twitter.com/goooglebike">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+
+                            <a class="icon-link socila" style="--clr: #3B5998" href="https://www.facebook.com/googelbike">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <br>
+                            <h2 class="">
+                                تسويق الكتروني كامل
+                            </h2>
+                            <div class="row text-center">
+                                <a class="icon-link col-md-2 col-3" href="">
+                                    <img src="img/home/stcpay.svg">
+                                </a>
+                                <a class="icon-link col-md-2 col-3" href="">
+                                    <img src="img/home/mada.svg">
+                                </a>
+                                <a class="icon-link col-md-2 col-3" href="">
+                                    <img src="img/home/master.svg">
+                                </a>
+                                <a class="icon-link col-md-2 col-3" href="">
+                                    <img src="img/home/epay.svg">
+                                </a>
+                                <a class="icon-link col-md-2 col-3" href="">
+                                    <img src="img/home/visa.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- End Container -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.migrate.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiqrIen8rWQrvJsu-7f4rOta0fmI5r2SI"></script>
+    <!--build:js js/triptip-plugins.min.js -->
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/jquery.imagesloaded.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/retina-1.1.0.min.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/infobox.min.js"></script>
+    <script src="js/markerclusterer.js"></script>
+    <script src="js/maps.js"></script>
+    <!-- endbuild -->
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/discover-js.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+
+
+</body>
+
+</html>
